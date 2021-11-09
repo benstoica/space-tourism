@@ -317,7 +317,7 @@ select {
   background: hsl(var(--clr-white) / 0.15);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 500ms linear, transform 50ms ease-in-out;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
 
 .large-button:hover::after,
@@ -326,7 +326,17 @@ select {
   transform: scale(1.5);
 }
 
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .primary-navigation {
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
@@ -334,8 +344,13 @@ select {
   background: hsl(var(--clr-dark) / 0.95);
 }
 
-.mobile-nav-toggle {
-  display: none;
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
 }
 
 @supports (backdrop-filter: blur(1rem)) {
@@ -343,6 +358,10 @@ select {
     background: hsl(var(--clr-white) / 0.05);
     backdrop-filter: blur(2rem);
   }
+}
+
+.mobile-nav-toggle {
+  display: none;
 }
 
 @media (max-width: 35rem) {
@@ -361,6 +380,10 @@ select {
 
   .primary-navigation[data-visible="true"] {
     transform: translateX(0);
+  }
+
+  .primary-navigation.underline-indicators > .active {
+    border: 0;
   }
 
   .mobile-nav-toggle {
@@ -386,19 +409,16 @@ select {
     outline: 5px solid white;
     outline-offset: 5px;
   }
+}
 
-  .primary-navigation.underline-indicators > .active {
-    border: 0;
+@media (min-width: 35em) and (max-width: 45em) {
+  .primary-navigation {
+    padding-inline: 3rem;
   }
-}
 
-.primary-navigation a {
-  text-decoration: none;
-}
-
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: 0.5em;
+  .primary-navigation a > span {
+    display: none;
+  }
 }
 
 .underline-indicators > * {
@@ -458,14 +478,14 @@ body {
 }
 
 @media (min-width: 35rem) {
-  .grid-container {
+  .home {
     background-position: center center;
     background-image: url(./assets/home/background-home-tablet.jpg);
   }
 }
 
 @media (min-width: 45rem) {
-  .grid-container {
+  .home {
     background-image: url(./assets/home/background-home-desktop.jpg);
   }
 }
