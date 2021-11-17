@@ -481,6 +481,10 @@ body {
   background-position: bottom center;
 }
 
+[hidden] {
+  display: none;
+}
+
 /* --------home---------  */
 .home {
   background-image: url(./assets/home/background-home-mobile.jpg);
@@ -508,13 +512,13 @@ body {
 @media (min-width: 35rem) {
   .destination {
     background-position: center center;
-    background-image: url(./assets/home/destination-home-tablet.jpg);
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
   }
 }
 
 @media (min-width: 45rem) {
   .destination {
-    background-image: url(./assets/home/destination-home-desktop.jpg);
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
   }
 }
 
