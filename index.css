@@ -481,9 +481,9 @@ body {
   background-position: bottom center;
 }
 
-/* [hidden] {
+[hidden] {
   display: none;
-} */
+}
 
 /* --------home---------  */
 .home {
