@@ -643,6 +643,34 @@ body {
   color: hsl(var(--clr-white) / 0.5);
 }
 
+/* ------crew-------*/
+.grid-container--technology {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+}
+
+.grid-container--technology > .dot-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--technology > .crew-details {
+  grid-area: content;
+}
+
+.technology-details h2 {
+  color: hsl(var(--clr-white) / 0.5);
+}
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
