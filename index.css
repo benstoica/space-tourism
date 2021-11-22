@@ -643,7 +643,7 @@ body {
   color: hsl(var(--clr-white) / 0.5);
 }
 
-/* ------crew-------*/
+/* ------technology-------*/
 .grid-container--technology {
   --flow-space: 2rem;
   grid-template-areas:
@@ -689,6 +689,19 @@ body {
       "content"
       "tabs"
       "image";
+  }
+
+  .grid-container--technology {
+    padding-bottom: 0;
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+  }
+
+  .grid-container--technology > .dot-indicators > * {
+    padding: 2em;
   }
 }
 
@@ -748,5 +761,26 @@ body {
     grid-column: span 2;
     align-self: end;
     max-width: 90%;
+  }
+
+  .grid-container--technology {
+    grid-template-columns: minmax(1rem, 1fr), minmax(0, 37rem), minmax(0, 23rem),
+      minmax(1rem, 1fr);
+    justify-items: start;
+
+    grid-template-areas:
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+
+  .grid-container--technology > picture {
+    grid-column: span 2;
+    align-self: center;
+    max-width: 90%;
+  }
+
+  .grid-container--technology > .dot-indicators > * {
+    padding: 2em;
   }
 }
