@@ -776,11 +776,12 @@ body {
 
   .grid-container--technology > picture {
     grid-column: span 2;
-    align-self: center;
+    align-self: start;
     max-width: 90%;
   }
 
   .grid-container--technology > .dot-indicators > * {
     padding: 2em;
+    border: 1px solid hsl(var(--clr-white) / 0.5);
   }
 }
