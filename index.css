@@ -671,6 +671,11 @@ body {
   color: hsl(var(--clr-white) / 0.5);
 }
 
+.grid-container--technology > .dot-indicators > * {
+  padding: 1em;
+  border: 1px solid hsl(var(--clr-white) / 0.5);
+}
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
@@ -701,7 +706,8 @@ body {
   }
 
   .grid-container--technology > .dot-indicators > * {
-    padding: 2em;
+    padding: 1.5em;
+    border: 1px solid hsl(var(--clr-white) / 0.5);
   }
 }
 
